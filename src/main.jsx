@@ -11,7 +11,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/simple-dex-with-react-router",
     element: <App />
   },
   {

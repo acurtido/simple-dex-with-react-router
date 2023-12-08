@@ -1,5 +1,5 @@
 {
-  "name": "simple-dex",
+  "name": "simple-dex-with-react-router",
   "private": true,
   "version": "0.0.0",
   "type": "module",
