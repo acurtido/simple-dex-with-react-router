@@ -10,7 +10,7 @@ export default function Pokemon({ url }) {
     return (
         <div>
             {data &&
-                <div className={styles.card} onClick={() => navigate('/pokemon', {state: data})}>
+                <div className={styles.card} onClick={() => navigate('/simple-dex-with-react-router/pokemon', {state: data})}>
                     <div> {data.name} </div>
                     <img src={data.sprites.front_default} alt={data.name} />
                 </div>}

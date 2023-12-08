@@ -1,14 +1,19 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function PokemonDetails() {
-    const location = useLocation();
-    
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const irMenu = () => {
+        navigate('/simple-dex-with-react-router')
+    }
+
     return (
         <div>
             <img src={location.state.sprites.front_default} alt={location.state.name} />
             <br />
             <label> Name:  </label>
-            <span style={{textTransform: 'capitalize'}}> {location.state.name} </span>
+            <span style={{ textTransform: 'capitalize' }}> {location.state.name} </span>
             <br />
             <label> Height:  </label>
             <span> {location.state.height} </span>
@@ -24,7 +29,9 @@ export default function PokemonDetails() {
             <br />
             <label> Types:  </label>
             <span> {location.state.types.map(type => type.type.name).join(", ")} </span>
-
+            <br />
+            <br />
+            <button onClick={irMenu}>Menu Principal</button>
         </div>
     )
 }

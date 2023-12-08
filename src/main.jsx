@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import PokemonDetails from './components/PokemonDetails.jsx'
+import PokemonDetails from './components/PokemonDetails'
+import PokemonInfo from './components/PokemonInfo'
 import './index.css'
 
 import {
@@ -15,8 +16,12 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/pokemon",
+    path: "/simple-dex-with-react-router/pokemon",
     element: <PokemonDetails />
+  },
+  {
+    path: "/simple-dex-with-react-router/pokemon-info/:id",
+    element: <PokemonInfo />
   }
 ]);
 
