@@ -8,7 +8,7 @@ export default function PokemonInfo() {
     const navigate = useNavigate()
 
     const irMenu = () => {
-        navigate('/simple-dex-with-react-router')
+        navigate('/')
     }
 
     return (
