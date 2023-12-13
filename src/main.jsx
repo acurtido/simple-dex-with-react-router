@@ -13,15 +13,15 @@ import {
 
 const router = createHashRouter([
   {
-    path: "/simple-dex-with-react-router",
+    path: "/",
     element: <App />
   },
   {
-    path: "/simple-dex-with-react-router/pokemon",
+    path: "/pokemon",
     element: <PokemonDetails />
   },
   {
-    path: "/simple-dex-with-react-router/pokemon-info/:id",
+    path: "/pokemon-info/:id",
     element: <PokemonInfo />
   }
 ]);
