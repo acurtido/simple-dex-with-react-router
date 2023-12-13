@@ -6,11 +6,11 @@ import PokemonInfo from './components/PokemonInfo'
 import './index.css'
 
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/simple-dex-with-react-router",
     element: <App />
