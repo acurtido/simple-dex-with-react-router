@@ -6,7 +6,6 @@ import PokemonInfo from './components/PokemonInfo'
 import './index.css'
 
 import {
-  createBrowserRouter,
   RouterProvider,
   createHashRouter
 } from "react-router-dom";
