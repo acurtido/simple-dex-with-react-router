@@ -8,9 +8,10 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
+  createHashRouter
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/simple-dex-with-react-router",
     element: <App />
