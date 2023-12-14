@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import styles from "./styles.module.css";
 
 export default function PokemonDetails() {
     const location = useLocation()
@@ -9,7 +10,7 @@ export default function PokemonDetails() {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <img src={location.state.sprites.front_default} alt={location.state.name} />
             <br />
             <label> Name:  </label>
