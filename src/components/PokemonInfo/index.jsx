@@ -2,6 +2,8 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useFetch } from '../../hooks/useFetch'
 import style from './styles.module.css'
 import { useSwipeable } from 'react-swipeable'
+import rightArrow from "/right-arrow.svg";
+import leftArrow from "/left-arrow.svg";
 
 export default function PokemonInfo() {
     const { id } = useParams()
@@ -20,7 +22,7 @@ export default function PokemonInfo() {
         rotationAngle: 0,                      // set a rotation angle
         swipeDuration: Infinity,               // allowable duration of a swipe (ms). *See Notes*
         touchEventOptions: { passive: true },  // options for touch listeners (*See Details*)
-      }
+    }
 
     const handlers = useSwipeable({
         onSwipedLeft: () => navigate(`/pokemon-info/${parseInt(id) + 1}`),
@@ -32,6 +34,8 @@ export default function PokemonInfo() {
         <div {...handlers} className={style.container}>
             {data && (
                 <>
+                    <img className={style.leftArrow} onClick={() => navigate(`/pokemon-info/${parseInt(id) - 1}`)} src={leftArrow} alt="left-arrow" />
+                    <img className={style.rightArrow} onClick={() => navigate(`/pokemon-info/${parseInt(id) + 1}`)} src={rightArrow} alt="right-arrow" />
                     <div>
                         <img src={data.sprites.front_default} alt={data.name} />
                     </div>

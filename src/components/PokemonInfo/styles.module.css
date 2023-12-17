@@ -8,4 +8,21 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    position: relative;
+}
+
+.leftArrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
+    left: 25px;
+}
+
+.rightArrow {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 0;
+    cursor: pointer;
+    right: 15px;
 }
