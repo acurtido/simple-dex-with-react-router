@@ -13,3 +13,7 @@
   cursor: pointer;
   transform: scale(1.05);
 }
+
+.name {
+  text-transform: capitalize;
+}

@@ -11,7 +11,7 @@ export default function Pokemon({ url }) {
         <div>
             {data &&
                 <div className={styles.card} onClick={() => navigate('/pokemon', {state: data})}>
-                    <div> {data.name} </div>
+                    <div className={styles.name}> {data.name} </div>
                     <img src={data.sprites.front_default} alt={data.name} />
                 </div>}
         </div>
